@@ -1,0 +1,65 @@
+/* State wise codes (Index Numbers)
+    1	Andhra Pradesh
+    2	Arunachal Pradesh
+    3	Assam
+    4	Bihar
+    5	Chhattisgarh
+    6	Goa
+    7	Gujarat
+    8	Haryana
+    9	Himachal Pradesh
+    10	Jammu and Kashmir
+    11	Karnataka
+    12	Kerala  
+    13	Madhya Pradesh 
+    14	Maharashtra
+    15	Manipur
+    16	Nagaland
+    17	Odisha
+    18	Punjab
+    19	Rajasthan
+    20	Sikkim
+    21	Tamil Nadu
+    22	Telangana
+    23	Uttar Pradesh
+    24	Uttarakhand
+    25	West Bengal
+*/
+/*
+    Crops in Rajasthan with codes:
+    Kharif
+    1	Bajra Rf
+    2 	Black Gram (urd Bean)
+    3	Cotton (kapas)
+    4	Cowpea
+    5	Green Gram (moong Bean/ Moong)
+    6	Groundnut (pea Nut/mung Phalli)
+    7	Guar
+    8	Maize (makka)
+    9	Moth Bean (kidney Bean/ Deww Gram)
+    10	Paddy (1)
+    11	Paddy (dhan)
+    12	Pearl Millet (bajra/bulrush Millet/spiked Millet)
+    13	Pigeon Pea (red Gram/arhar/tur)
+    14	Sesame (gingelly/til)/sesamum
+    15	Sorghum (jowar/great Millet)
+    16	Soyabean RF
+
+    Rabi
+    17	Barley (jau)
+    18	Bengal Gram (gram/chick Pea/kabuli/chana)
+    19	Coriander
+    20	Cumin
+    21	Isabgol
+    22	Lentil (masur)
+    23	Methi (fenugreek)
+    24	Mustard
+    25	Rocket Salad (taramira)
+    26	Wheat
+
+*/
+/*
+    Season 
+    01 Kharif
+    02 Rabi
+*/
