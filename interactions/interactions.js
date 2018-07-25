@@ -13,20 +13,43 @@ module.exports = async function (callback) {
     console.log("adding crop 1...");
     await addCropDetails("Rice", "RandomShit", 2, 90);
     
+    console.log("adding crop 2...");
+    await addCropDetails("paddy", "RandomShit", 5, 80);
+    
+
     console.log("Adding tehsil 1...");
     await addTehsilDetails("Alwar", "gasjdyhgajshdg", insurance);
+
+    console.log("Adding tehsil 2...");
+    await addTehsilDetails("randomJagah", "gasjdyhsadgajshdg", insurance);
 
     console.log("Adding scale of finance.");
     await addsScaleOfFinance(0,0,1000);
 
+    console.log("Adding scale of finance.");
+    await addsScaleOfFinance(1,1,2000);
+
     console.log("Adding premiuum");
     await addsPremiumRate(0,0,10);
+
+    console.log("Adding premiuum");
+    await addsPremiumRate(1,1,20);
 
     console.log("Adding First Farmer...");
     await addFarmerDetails("Sid", farmer1, 2, 0, 0);    
 
+
+    console.log("Adding 2 Farmer...");
+    await addFarmerDetails("Siddha", farmer2, 5, 1, 1);    
+
+
     console.log("getting Premium");
     await getAllPremiums(0);
+
+
+    console.log("getting Premium");
+    await getAllPremiums(1);
+
 
     console.log("Making Claim.");
 //    await makefarmerClaim(farmer1);
@@ -35,14 +58,10 @@ module.exports = async function (callback) {
   //  await updateClaimStatus(0, true);
 
     console.log("Making Tehsil Claim!");
-   // await makeTehsilClaim(0);
+    await makeTehsilClaim(1);
 
     console.log("End of Season:");
-<<<<<<< HEAD
     await EndOfSeason();
-=======
-    await endOfSeason();
->>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
 
 
     await getsNumberOfClaims();
@@ -80,7 +99,7 @@ async function addFarmerDetails(name, address, area, crop, tehsil) {
 async function getAllPremiums(tehsil) {
     var instance = await scii.deployed();
     var result = await instance.getAllPremium(tehsil, {from: insurance});
-    console.log(result);
+    console.log(result.tx);
 }
 async function getLedger() {
     var instance = await scii.deployed();
@@ -108,14 +127,10 @@ async function makeTehsilClaim(tehsilId) {
 }
 async function updateClaimStatus(farmerId, status) {
     var instance =  await scii.deployed();
-    await instance.addBalance(insurance, 2000);
+    await instance.addBalance(insurance, 200000);
     await instance.updateFarmerClaimStatus(farmerId, status);
 }
-<<<<<<< HEAD
 async function EndOfSeason() {
-=======
-async function endOfSeason() {
->>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
     var instance = await scii.deployed();
     var n = await instance.getTotalFarmers();
     for (let i = 0; i < n; i++) {
@@ -132,10 +147,7 @@ async function endOfSeason() {
             continue;
         }
     }
-<<<<<<< HEAD
     await instance.endOfSeason();
-=======
->>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
 }
 async function getsNumberOfClaims() {
     var instance = await scii.deployed();
