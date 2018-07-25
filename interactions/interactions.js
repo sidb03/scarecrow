@@ -38,7 +38,11 @@ module.exports = async function (callback) {
    // await makeTehsilClaim(0);
 
     console.log("End of Season:");
+<<<<<<< HEAD
     await EndOfSeason();
+=======
+    await endOfSeason();
+>>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
 
 
     await getsNumberOfClaims();
@@ -107,7 +111,11 @@ async function updateClaimStatus(farmerId, status) {
     await instance.addBalance(insurance, 2000);
     await instance.updateFarmerClaimStatus(farmerId, status);
 }
+<<<<<<< HEAD
 async function EndOfSeason() {
+=======
+async function endOfSeason() {
+>>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
     var instance = await scii.deployed();
     var n = await instance.getTotalFarmers();
     for (let i = 0; i < n; i++) {
@@ -124,7 +132,10 @@ async function EndOfSeason() {
             continue;
         }
     }
+<<<<<<< HEAD
     await instance.endOfSeason();
+=======
+>>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
 }
 async function getsNumberOfClaims() {
     var instance = await scii.deployed();

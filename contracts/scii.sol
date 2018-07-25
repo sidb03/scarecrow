@@ -44,8 +44,13 @@ contract Scii {
     mapping(uint => Tehsil) tehsil;
     uint tehsils =0;
     address owner;
+<<<<<<< HEAD
     uint[nTehsils][nCrops] scaleOfFinance; // 2-D array with tehsil vs crops.
     uint[nTehsils][nCrops] insurancePremiumRate;
+=======
+    uint[2][3] scaleOfFinance; // 2-D array with tehsil vs crops.
+    uint[2][3] insurancePremiumRate;
+>>>>>>> b76d4899d0c42e06aeea8ee99073b17c583b8584
     mapping(uint => uint) tehsilOfFarmer; //farmer id to tehsil id mapping
     mapping(address => uint[]) tehsilsOf; //tehsil ids under a particular insurance company
     mapping (address => uint) balanceOf;
