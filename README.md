@@ -31,7 +31,18 @@ In order to make changes to the parameters in the function calls to the smart co
 
 _The ML model is yet to be implemented. It requires data that is only accessible after a partnership with the Govt._
 
-
-
+## Mockups
+<p float="left">
+  <img src="mockups/1.1-Splash%20Screen.png" width="250" hspace="15">
+  <img src="mockups/2.1-Home%20Screen.png" width="250" hspace="15">
+  <img src="mockups/5.1-Profile.png" width="250" hspace="15">
+</p>
+<br/>
+<br/>
+<p float="left">
+  <img src="mockups/3.1-Insurance.png" width="250" hspace="15">
+  <img src="mockups/4.1-KCC%20passbook.png" width="250" hspace="15">
+  <img src="mockups/8.1-Make%20claim.png" width="250" hspace="15">
+</p>
 
 
