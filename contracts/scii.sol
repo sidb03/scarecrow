@@ -168,7 +168,7 @@ contract Scii {
         if(approved) {
             Farmer[farmerId].policyStatus = _policyStatus.APPROVED;
             uint amount = getPayoutAmount(farmerId, Farmer[farmerId].cropId);
-            transferFrom(tehsil[Farmer[farmerId].tehsil].insuranceCompany, Farmer[farmerId].adr, amount); //TODO implement transfer
+            transferFrom(tehsil[Farmer[farmerId].tehsil].insuranceCompany, Farmer[farmerId].adr, amount);
             numberOfClaimsPaid++;
         }
         else {
@@ -180,7 +180,6 @@ contract Scii {
         for (uint i = 0; i < FarmerCount; i++) {
             Farmer[i].policyStatus = _policyStatus.CLOSED;
         }
-        //Check for every farmer
     }
 
     function getPayoutAmount(uint cropId, uint farmerId) public view returns(uint) {
@@ -219,6 +218,10 @@ contract Scii {
     function getTotalFarmers() public view returns(uint) {
         return FarmerCount;
     }
-    //Update tehsil current conditions   
-    //Show insurance Company, ledger
+    function updateTehsil(uint tehsilId, string currentCondition) public {
+        tehsil[tehsilId].currentConditions = currentCondition;
+    }
+    function getCurrentConditionOfFarmer(uint farmerID) public view returns (string, uint) {
+        return (tehsil[Farmer[farmerID].tehsil].currentConditions, Farmer[farmerID].cropId); 
+    }
 }

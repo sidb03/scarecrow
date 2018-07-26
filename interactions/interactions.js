@@ -8,63 +8,62 @@ var farmer1 = web3.eth.accounts[4];
 var farmer2 = web3.eth.accounts[5];
 
 module.exports = async function (callback) {
-    console.log("Hello Frands! Chai peeloo");
-
-    console.log("adding crop 1...");
+    //console.log("Hello Frands! Chai peeloo");
+    console.log("Initiating system...");
+    console.log("adding crop Rice with premium amount 2%, Indemnity level: 90%");
     await addCropDetails("Rice", "RandomShit", 2, 90);
-    
-    console.log("adding crop 2...");
+    console.log("\n");
+    console.log("adding crop Paddy with premium amount 5%, Indemnity level: 80%");
     await addCropDetails("paddy", "RandomShit", 5, 80);
-    
-
-    console.log("Adding tehsil 1...");
+    console.log("\n");
+    console.log("Adding tehsil Alwar with insurance company:",insurance);
     await addTehsilDetails("Alwar", "gasjdyhgajshdg", insurance);
-
-    console.log("Adding tehsil 2...");
-    await addTehsilDetails("randomJagah", "gasjdyhsadgajshdg", insurance);
-
-    console.log("Adding scale of finance.");
+    console.log("\n");
+    console.log("Adding tehsil Loharu with insurance company:",insurance);
+    await addTehsilDetails("Loharu", "gasjdyhsadgajshdg", insurance);
+    console.log("\n");
+    console.log("Adding scale of finance for Alwar for crop Rice: 1000");
     await addsScaleOfFinance(0,0,1000);
-
-    console.log("Adding scale of finance.");
+    console.log("\n");
+    console.log("Adding scale of finance for Lohary for crop paddy: 2000");
     await addsScaleOfFinance(1,1,2000);
-
-    console.log("Adding premiuum");
+    console.log("\n");
+    console.log("Adding premium rate for Rice in Alwar: 10%");
     await addsPremiumRate(0,0,10);
-
-    console.log("Adding premiuum");
+    console.log("\n");
+    console.log("Adding premium rate for paddy in Lohary: 20%");
     await addsPremiumRate(1,1,20);
+    console.log("\n");
+    console.log("Adding farmer : Ram Singh with an area of 2 hectares, growing Rice in Alwar");
+    await addFarmerDetails("Ram Singh", farmer1, 2, 0, 0);    
 
-    console.log("Adding First Farmer...");
-    await addFarmerDetails("Sid", farmer1, 2, 0, 0);    
-
-
-    console.log("Adding 2 Farmer...");
-    await addFarmerDetails("Siddha", farmer2, 5, 1, 1);    
-
-
-    console.log("getting Premium");
+    console.log("\n");
+    console.log("Adding farmer : Siddharth with an area of 5 hectares, growing paddy in loharu");
+    await addFarmerDetails("Siddharth", farmer2, 5, 1, 1);    
+    console.log("\n");
+    console.log("Getting total collected premium for insurance company from Alwar..");
     await getAllPremiums(0);
 
-
-    console.log("getting Premium");
+    console.log("\n");
+    console.log("Getting total collected premium for insurance company from Loharu..");
     await getAllPremiums(1);
 
-
-    console.log("Making Claim.");
-//    await makefarmerClaim(farmer1);
-
-    console.log("Approving claim!");
-  //  await updateClaimStatus(0, true);
-
-    console.log("Making Tehsil Claim!");
+    console.log("\n");
+    console.log("Making Claim for farmer 1");
+    await makefarmerClaim(farmer1);
+    console.log("\n");
+    console.log("Approving claim for farmer 1!");
+    await updateClaimStatus(0, true);
+    console.log("\n");
+    console.log("Making Tehsil Wide Claim for Loharu");
     await makeTehsilClaim(1);
-
-    console.log("End of Season:");
+    console.log("\n");
+    console.log("End of Season. All deserving farmers get payouts");
     await EndOfSeason();
-
-
+    console.log("\n");
+    console.log("Number of claims paid:")
     await getsNumberOfClaims();
+    console.log("\n");
     console.log("Ledger:\n");
     await getLedger();
 
