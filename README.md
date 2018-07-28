@@ -1,11 +1,10 @@
 
 # Scarecrow
 ### Smart Contract Based Crop Index Insurance
-*(This project is a submission for Rajasthan Hackathon 5.0.)*
+*(This project won the first runners up award at Rajasthan Hackathon 5.0.)*
 
 
-***Farmer-friendly, fair and transparent index based 
-Crop Insurance using Blockchain and Machine Learning.***
+***A crop insurance system,that, using blockchain and machine learning mitigates the subjectivity of claim verification, thus giving 400 million farmers, the right payout, at the right time.***
 
 Implemented here, is the smart contract and the interaction scripts for an index based crop insurance system written using Solidity and deployed on the Ropsten Ethereum testnet. 
 
@@ -31,7 +30,7 @@ In order to make changes to the parameters in the function calls to the smart co
 
 _The ML model is yet to be implemented. It requires data that is only accessible after a partnership with the Govt._
 
-## Mockups
+## Prototype Screens [Live Prototype](www.bit.ly/scarecrowProto)
 <p float="left">
   <img src="mockups/1.1-Splash%20Screen.png" width="250" hspace="15">
   <img src="mockups/2.1-Home%20Screen.png" width="250" hspace="15">
