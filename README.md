@@ -8,7 +8,7 @@
 
 Implemented here, is the smart contract and the interaction scripts for an index based crop insurance system written using Solidity and deployed on the Ropsten Ethereum testnet. 
 
-Also, we propose a ML model that is trained on crop, weather and soil data obtained from various sources like the IMD API, Bhuvan and offline sources like CCE experiments. It returns the probability of a certain crop failing. This is sent to the smart contract and on the basis of this data, it decides whether to transfer the payout amount to the farmer.
+We also propose a ML model that is trained on crop, weather and soil data obtained from various sources like the IMD API, Bhuvan and offline sources like CCE experiments. It returns the probability of a certain crop failing. This is sent to the smart contract and on the basis of this data, it decides whether to transfer the payout amount to the farmer.
 
 The SCII smart contract is deployed on the Ropsten Testnet here: https://ropsten.etherscan.io/address/0x59ec0a28bf69958c79ba1e66e09d646c4493f0d7
 
